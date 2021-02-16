@@ -31,4 +31,9 @@ public class StringCalculatorTest {
 	public void addNumbersWithNewLineDelim() {
 		assertThat(StringCalculator.Add("1\n2\n3"),is(6));
 	}
+	
+	@Test
+	public void addNumbersWithSpecifiedDelim() {
+		assertThat(StringCalculator.Add("//;\n1;2"),is(3));
+	}
 }
