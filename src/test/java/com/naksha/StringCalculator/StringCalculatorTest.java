@@ -26,4 +26,9 @@ public class StringCalculatorTest {
 	public void addFourNumbers() {
 		assertThat(StringCalculator.Add("1,2,3,4"),is(10));
 	}
+	
+	@Test
+	public void addNumbersWithNewLineDelim() {
+		assertThat(StringCalculator.Add("1\n2\n3"),is(6));
+	}
 }
