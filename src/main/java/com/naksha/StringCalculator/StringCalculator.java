@@ -4,7 +4,12 @@ public class StringCalculator {
 
 	public static Integer Add(String string) {
 		// TODO Auto-generated method stub
-		return 0;
+		if(string=="") {
+			return 0;
+		}
+		else {
+			return Integer.parseInt(string);
+		}
 	}
 
 }

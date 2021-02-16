@@ -12,4 +12,9 @@ public class StringCalculatorTest {
 		assertThat(StringCalculator.Add(""),is(0));
 	}
 	
+	@Test
+	public void addSingleNumber() {
+		assertThat(StringCalculator.Add("1"),is(1));
+	}
+	
 }
