@@ -21,4 +21,9 @@ public class StringCalculatorTest {
 	public void addTwoNumbers() {
 		assertThat(StringCalculator.Add("1,2"),is(3));
 	}
+	
+	@Test
+	public void addFourNumbers() {
+		assertThat(StringCalculator.Add("1,2,3,4"),is(10));
+	}
 }

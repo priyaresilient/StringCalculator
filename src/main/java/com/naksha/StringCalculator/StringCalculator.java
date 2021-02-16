@@ -3,6 +3,7 @@ package com.naksha.StringCalculator;
 public class StringCalculator {
 
 	public static Integer Add(String string) {
+		int sum = 0;
 		// TODO Auto-generated method stub
 		if(string=="") {
 			return 0;
@@ -11,10 +12,12 @@ public class StringCalculator {
 			return Integer.parseInt(string);
 		}else {
 			String[] line = string.split(",");
-			int num1=Integer.parseInt(line[0]);
-			int num2=Integer.parseInt(line[1]);
-			return num1+num2;
+			
+			for(int i=0;i<line.length;i++) {
+				sum+=Integer.parseInt(line[i]);
+			}
 		}
+		return sum;
 	}
 
 }
