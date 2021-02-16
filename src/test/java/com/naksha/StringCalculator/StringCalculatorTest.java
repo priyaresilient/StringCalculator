@@ -17,4 +17,8 @@ public class StringCalculatorTest {
 		assertThat(StringCalculator.Add("1"),is(1));
 	}
 	
+	@Test
+	public void addTwoNumbers() {
+		assertThat(StringCalculator.Add("1,2"),is(3));
+	}
 }
