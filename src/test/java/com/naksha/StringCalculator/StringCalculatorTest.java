@@ -36,4 +36,9 @@ public class StringCalculatorTest {
 	public void addNumbersWithSpecifiedDelim() {
 		assertThat(StringCalculator.Add("//;\n1;2"),is(3));
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void addNumbersNegativeNumbers() {
+		StringCalculator.Add("-3");
+	}
 }

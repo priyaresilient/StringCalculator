@@ -11,9 +11,7 @@ public class StringCalculator {
 		if(string=="") {
 			return 0;
 		}
-		else if(string.length()==1){
-			return Integer.parseInt(string);
-		}else {
+		else {
 			String delim = "\n|,";
 			
 			if(string.startsWith("//")) {
@@ -22,8 +20,16 @@ public class StringCalculator {
 				string = parts[1];
 			}
 			
-			Stream<String> input = Arrays.stream(string.split(delim));
-			return input.mapToInt(Integer::parseInt).sum();
+			String[] input = string.split(delim);
+			for(int i=0;i<input.length;i++) {
+				if(Integer.parseInt(input[i])<0) {
+					
+					throw new IllegalArgumentException();
+					
+				}
+				sum+=Integer.parseInt(input[i]);
+			}
+			return sum;
 		}
 		
 	}
