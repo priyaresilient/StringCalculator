@@ -21,10 +21,17 @@ public class StringCalculator {
 			}
 			
 			String[] input = string.split(delim);
+			String negString ="";
 			for(int i=0;i<input.length;i++) {
 				if(Integer.parseInt(input[i])<0) {
-					
-					throw new IllegalArgumentException();
+					negString+=input[i];
+					for(int j=i+1;j<input.length;j++) {
+						if(Integer.parseInt(input[j])<0) {
+							negString=negString+","+input[j];
+						}
+					}
+					System.out.println(negString);
+					throw new IllegalArgumentException(negString);
 					
 				}
 				sum+=Integer.parseInt(input[i]);
